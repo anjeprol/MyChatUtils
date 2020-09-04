@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private ListView listview;
     private ArrayList<String> names;
     private ArrayList<String> msg;
+    private ArrayList<String> hr;
     private int profile [];
 
 
@@ -45,14 +46,29 @@ public class MainActivity extends AppCompatActivity {
         names.add("Rodrigo");
         names.add("Jose");
         names.add("pio");
+        names.add("Rodrigo");
+        names.add("Jose");
+        names.add("pio");
 
         msg = new ArrayList<String>();
         msg.add("asi quedamos porq...");
         msg.add("no, prefiero otro día");
         msg.add("...");
-        msg.add("va!");
+        msg.add("asi quedamos porq...");
+        msg.add("no, prefiero otro día");
+        msg.add("...");
+        msg.add("va! te avisco como quedamos");
 
-        CustomAdapter customAdapter = new CustomAdapter(this, R.layout.list_item, names, msg);
+        hr = new ArrayList<String>();
+        hr.add("5:23 AM");
+        hr.add("3:10 PM");
+        hr.add("Ayer");
+        hr.add("12/05/20");
+        hr.add("ayer");
+        hr.add("1:45 PM");
+        hr.add("6:00 PM");
+
+        CustomAdapter customAdapter = new CustomAdapter(this, R.layout.list_item, names, msg, hr);
         listview.setAdapter(customAdapter);
 
         setSupportActionBar(toolbar);

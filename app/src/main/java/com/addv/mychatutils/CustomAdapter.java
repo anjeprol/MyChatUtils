@@ -14,12 +14,14 @@ public class CustomAdapter extends BaseAdapter {
     private int layout;
     private ArrayList<String> names;
     private ArrayList<String> msgs;
+    private ArrayList<String> hrs;
 
-    public CustomAdapter(Context context, int layout, ArrayList<String> names,  ArrayList<String> msgs){
+    public CustomAdapter(Context context, int layout, ArrayList<String> names,  ArrayList<String> msgs,  ArrayList<String> hrs){
         this.context = context;
         this.layout = layout;
         this.names = names;
         this.msgs = msgs;
+        this.hrs = hrs;
     }
 
     @Override
@@ -45,8 +47,10 @@ public class CustomAdapter extends BaseAdapter {
 
         TextView name = (TextView) v.findViewById(R.id.name);
         TextView msg = (TextView) v.findViewById(R.id.msg);
+        TextView hr = (TextView) v.findViewById(R.id.hr);
         name.setText(names.get(position));
         msg.setText(msgs.get(position));
+        hr.setText(hrs.get(position));
         return v;
     }
 }
