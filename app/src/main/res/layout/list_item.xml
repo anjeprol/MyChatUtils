@@ -35,11 +35,12 @@
     </LinearLayout>
     <TextView
         android:id="@+id/hr"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_top"
         android:layout_marginLeft="@dimen/margin_left_time"
         android:textColor="@color/tx_color"
         android:text="0:00 PM"
+        android:textAlignment="center"
         />
 </LinearLayout>
