@@ -13,11 +13,13 @@ public class CustomAdapter extends BaseAdapter {
     private Context context;
     private int layout;
     private ArrayList<String> names;
+    private ArrayList<String> msgs;
 
-    public CustomAdapter(Context context, int layout, ArrayList<String> names){
+    public CustomAdapter(Context context, int layout, ArrayList<String> names,  ArrayList<String> msgs){
         this.context = context;
         this.layout = layout;
         this.names = names;
+        this.msgs = msgs;
     }
 
     @Override
@@ -40,9 +42,11 @@ public class CustomAdapter extends BaseAdapter {
         View v = convertView;
         LayoutInflater layoutInflater = LayoutInflater.from(this.context);
         v = layoutInflater.inflate(R.layout.list_item, null);
-        String currentName = names.get(position);
-        TextView textView = (TextView) v.findViewById(R.id.textview);
-        textView.setText(currentName);
+
+        TextView name = (TextView) v.findViewById(R.id.name);
+        TextView msg = (TextView) v.findViewById(R.id.msg);
+        name.setText(names.get(position));
+        msg.setText(msgs.get(position));
         return v;
     }
 }

@@ -22,6 +22,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private ListView listview;
     private ArrayList<String> names;
+    private ArrayList<String> msg;
     private int profile [];
 
 
@@ -34,12 +35,18 @@ public class MainActivity extends AppCompatActivity {
         listview = (ListView) findViewById(R.id.simpleListView);
 
         names = new ArrayList<String>();
-        names.add("Veracruz");
-        names.add("Tabasco");
-        names.add("Chiapas");
-        names.add("Campeche");
+        names.add("Angelica");
+        names.add("Rodrigo");
+        names.add("Jose");
+        names.add("pio");
 
-        CustomAdapter customAdapter = new CustomAdapter(this, R.layout.list_item, names);
+        msg = new ArrayList<String>();
+        msg.add("asi quedamos porq...");
+        msg.add("no, prefiero otro día");
+        msg.add("...");
+        msg.add("va!");
+
+        CustomAdapter customAdapter = new CustomAdapter(this, R.layout.list_item, names, msg);
         listview.setAdapter(customAdapter);
 
         setSupportActionBar(toolbar);
