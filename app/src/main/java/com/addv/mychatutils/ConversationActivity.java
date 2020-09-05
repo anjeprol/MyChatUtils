@@ -1,5 +1,6 @@
 package com.addv.mychatutils;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.appcompat.app.ActionBar;
@@ -12,6 +13,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.Objects;
@@ -36,6 +39,9 @@ public class ConversationActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         TextView profile = toolbar.findViewById(R.id.profile);
+        EditText message = (EditText) findViewById(R.id.message);
+        message.requestFocus();
+        showKeyboard();
         status = toolbar.findViewById(R.id.status);
 
         profile.setText(name);
@@ -44,6 +50,16 @@ public class ConversationActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
 
+    }
+
+    public void showKeyboard(){
+        InputMethodManager inputMethodManager = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputMethodManager.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
+    }
+
+    public void closeKeyboard(){
+        InputMethodManager inputMethodManager = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputMethodManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
     }
 
     public void send (int time) {
