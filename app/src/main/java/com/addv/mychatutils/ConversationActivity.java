@@ -2,13 +2,18 @@ package com.addv.mychatutils;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
+
+import java.util.Objects;
 
 
 public class ConversationActivity extends AppCompatActivity {
@@ -26,7 +31,9 @@ public class ConversationActivity extends AppCompatActivity {
         }
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle(name);
+        TextView profile = (TextView) toolbar.findViewById(R.id.profile);
+
+        profile.setText(name);
 
         setSupportActionBar(toolbar);
 
