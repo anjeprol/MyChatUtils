@@ -6,6 +6,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,6 +18,9 @@ import java.util.Objects;
 
 
 public class ConversationActivity extends AppCompatActivity {
+    private final static String ACTIVE = "Escribiendo...";
+    private final static String ONLINE = "Conectado";
+    private TextView status ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,17 +30,30 @@ public class ConversationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_conversation);
         String name = new String();
 
-        if(getIntent() != null ){
+        if (getIntent() != null) {
             name = getIntent().getExtras().getString("name");
         }
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        TextView profile = (TextView) toolbar.findViewById(R.id.profile);
+        TextView profile = toolbar.findViewById(R.id.profile);
+        status = toolbar.findViewById(R.id.status);
 
         profile.setText(name);
+            status.setText("");
+            send(2);
 
         setSupportActionBar(toolbar);
 
+    }
+
+    public void send (int time) {
+        time = time * 1000;
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                status.setText(ONLINE);
+            }
+        }, time);   //5 seconds
     }
 
     @Override

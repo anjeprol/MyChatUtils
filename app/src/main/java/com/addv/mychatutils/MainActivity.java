@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-        Toast.makeText(MainActivity.this, "Has pulsado: " + names.get(position), Toast.LENGTH_LONG).show();
+       // Toast.makeText(MainActivity.this, "Has pulsado: " + names.get(position), Toast.LENGTH_LONG).show();
         mIntent = new Intent(this, ConversationActivity.class);
         mIntent = mIntent.putExtra("name", names.get(position));
         startActivity(mIntent);
