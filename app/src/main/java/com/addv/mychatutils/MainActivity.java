@@ -1,5 +1,6 @@
 package com.addv.mychatutils;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -15,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
