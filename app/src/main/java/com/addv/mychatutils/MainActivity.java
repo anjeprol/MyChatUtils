@@ -1,5 +1,6 @@
 package com.addv.mychatutils;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -21,12 +22,12 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     private ListView listview;
     private ArrayList<String> names;
     private ArrayList<String> msg;
     private ArrayList<String> hr;
-    private int profile [];
+    private Intent mIntent;
 
 
     @Override
@@ -35,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -73,12 +73,8 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
 
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Toast.makeText(MainActivity.this, "Has pulsado: "+ names.get(position), Toast.LENGTH_LONG).show();
-            }
-        });
+        listview.setOnItemClickListener(this);
+
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,5 +105,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+        Toast.makeText(MainActivity.this, "Has pulsado: " + names.get(position), Toast.LENGTH_LONG).show();
+        mIntent = new Intent(this, ConversationActivity.class);
+        mIntent = mIntent.putExtra("name", names.get(position));
+        startActivity(mIntent);
+        //mInten.putExtra(names.get(position));
+
     }
 }
