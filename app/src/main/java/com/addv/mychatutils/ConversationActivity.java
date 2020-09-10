@@ -3,7 +3,6 @@ package com.addv.mychatutils;
 import android.content.Context;
 import android.os.Bundle;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -17,8 +16,6 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import java.util.Objects;
 
 
 public class ConversationActivity extends AppCompatActivity implements View.OnClickListener {
@@ -42,7 +39,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
         }
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        mLy_messages = findViewById(R.id.ly_messages);
+        mLy_messages = findViewById(R.id.ly_content_messages);
         params = (LinearLayout.LayoutParams) mLy_messages.getLayoutParams();
         TextView profile = toolbar.findViewById(R.id.profile);
         messageET = findViewById(R.id.message);
