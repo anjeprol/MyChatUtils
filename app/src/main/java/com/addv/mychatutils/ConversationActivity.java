@@ -48,14 +48,13 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
         messageET = findViewById(R.id.message);
         messageET.requestFocus();
         messageET.setOnClickListener(this);
-        messageET.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        mLy_messages.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onFocusChange(View view, boolean hasFocus) {
-                if (!hasFocus) {
-                    params.height = params.MATCH_PARENT;
-                    params.width = params.WRAP_CONTENT;
-                    mLy_messages.setLayoutParams(params);
-                }
+            public void onClick(View view) {
+                params.height = params.MATCH_PARENT;
+                params.width = params.WRAP_CONTENT;
+                mLy_messages.setLayoutParams(params);
+                closeKeyboard();
             }
         });
 
@@ -110,14 +109,6 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        messageET.clearFocus();
-        mLy_messages.requestFocus();
     }
 
     public void adjustSize() {
