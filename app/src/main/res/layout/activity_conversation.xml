@@ -112,7 +112,6 @@
                             android:gravity="end"
                             android:hint="4:49 PM"
                             android:textSize="@dimen/hint_size_address" />
-
                     </LinearLayout>
 
                 </LinearLayout>
@@ -121,9 +120,9 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/msg_send"
-                android:layout_gravity="right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="right"
                 android:layout_marginLeft="@dimen/margin_sides"
                 android:layout_marginTop="@dimen/margin_top"
                 android:layout_marginRight="@dimen/margin_sides"
