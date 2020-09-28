@@ -45,6 +45,8 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
         messageET = findViewById(R.id.message);
         messageET.requestFocus();
         messageET.setOnClickListener(this);
+
+        /** Para la barra de mensajes **/
         mLy_messages.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
