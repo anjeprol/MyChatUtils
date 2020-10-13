@@ -61,7 +61,7 @@
     <ScrollView
         android:id="@+id/sly_texts"
         android:layout_width="match_parent"
-        android:layout_height="294dp"
+        android:layout_height="376dp"
         android:gravity="bottom"
         android:orientation="horizontal">
 
@@ -74,11 +74,12 @@
                 android:id="@+id/msg_send01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
                 android:layout_gravity="right"
                 android:layout_marginLeft="@dimen/margin_sides"
                 android:layout_marginTop="@dimen/margin_top"
                 android:layout_marginRight="@dimen/margin_sides"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/bg_text_sent"
                 app:cardCornerRadius="@dimen/cornerRadius">
 
 
@@ -92,11 +93,12 @@
 
                     <TextView
                         android:id="@+id/tv_send_text01"
-                        android:layout_width="150dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/margin_sides"
                         android:layout_marginTop="@dimen/top_text_views"
                         android:text="Mensaje para enviar"
+                        android:textColor="#000000"
                         android:textSize="@dimen/text_size_title"
                         android:textStyle="bold" />
 
@@ -119,10 +121,10 @@
                 android:id="@+id/msg_received01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
                 android:layout_marginLeft="@dimen/margin_sides"
                 android:layout_marginTop="@dimen/margin_top"
                 android:layout_marginRight="@dimen/margin_sides"
+                android:visibility="gone"
                 app:cardCornerRadius="@dimen/cornerRadius">
 
                 <LinearLayout
@@ -135,7 +137,7 @@
 
                     <TextView
                         android:id="@+id/tv_received_text01"
-                        android:layout_width="@dimen/widthText"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/margin_sides"
                         android:layout_marginTop="@dimen/top_text_views"
@@ -145,6 +147,184 @@
 
                     <TextView
                         android:id="@+id/tv_hr_received"
+                        android:layout_width="@dimen/widthText"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/top_text_views"
+                        android:layout_marginRight="@dimen/margin_sides"
+                        android:layout_marginBottom="@dimen/margin_sides"
+                        android:gravity="end"
+                        android:hint="4:49 PM"
+                        android:textSize="@dimen/hint_size_address" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/msg_send02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="@dimen/margin_sides"
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginRight="@dimen/margin_sides"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/bg_text_sent"
+                app:cardCornerRadius="@dimen/cornerRadius">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_send_views00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_sides"
+                    android:layout_marginRight="@dimen/margin_sides"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_send_text02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_sides"
+                        android:layout_marginTop="@dimen/top_text_views"
+                        android:text="Mensaje para enviar"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/text_size_title"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_hr_sendd"
+                        android:layout_width="@dimen/widthText"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/top_text_views"
+                        android:layout_marginRight="@dimen/margin_sides"
+                        android:layout_marginBottom="@dimen/margin_sides"
+                        android:gravity="end"
+                        android:hint="4:49 PM"
+                        android:textSize="@dimen/hint_size_address" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/msg_received02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_sides"
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginRight="@dimen/margin_sides"
+                android:visibility="gone"
+                app:cardCornerRadius="@dimen/cornerRadius">
+
+                <LinearLayout
+                    android:id="@+id/ll_received_viewss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_sides"
+                    android:layout_marginRight="@dimen/margin_sides"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_received_text02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_sides"
+                        android:layout_marginTop="@dimen/top_text_views"
+                        android:text="Mensaje para recibido"
+                        android:textSize="@dimen/text_size_title"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_hr_receivedd"
+                        android:layout_width="@dimen/widthText"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/top_text_views"
+                        android:layout_marginRight="@dimen/margin_sides"
+                        android:layout_marginBottom="@dimen/margin_sides"
+                        android:gravity="end"
+                        android:hint="4:49 PM"
+                        android:textSize="@dimen/hint_size_address" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/msg_send03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="@dimen/margin_sides"
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginRight="@dimen/margin_sides"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/bg_text_sent"
+                app:cardCornerRadius="@dimen/cornerRadius">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_send_viewsss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_sides"
+                    android:layout_marginRight="@dimen/margin_sides"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_send_text03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_sides"
+                        android:layout_marginTop="@dimen/top_text_views"
+                        android:text="Mensaje para enviar"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/text_size_title"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_hr_sendd"
+                        android:layout_width="@dimen/widthText"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/top_text_views"
+                        android:layout_marginRight="@dimen/margin_sides"
+                        android:layout_marginBottom="@dimen/margin_sides"
+                        android:gravity="end"
+                        android:hint="4:49 PM"
+                        android:textSize="@dimen/hint_size_address" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/msg_received03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_sides"
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginRight="@dimen/margin_sides"
+                android:visibility="gone"
+                app:cardCornerRadius="@dimen/cornerRadius">
+
+                <LinearLayout
+                    android:id="@+id/ll_received_viewsss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_sides"
+                    android:layout_marginRight="@dimen/margin_sides"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_received_text03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_sides"
+                        android:layout_marginTop="@dimen/top_text_views"
+                        android:text="Mensaje para recibido"
+                        android:textSize="@dimen/text_size_title"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_hr_receiveddd"
                         android:layout_width="@dimen/widthText"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/top_text_views"

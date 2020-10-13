@@ -24,8 +24,11 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
     private LinearLayout mLy_messages;
     private LinearLayout.LayoutParams params;
     private TextView status;
+    private TextView mMessage;
     private EditText messageET;
     private Button mSend_bt;
+    private CardView sentCV ;
+    private int numMessage = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,17 +52,6 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
         messageET.setOnClickListener(this);
         mSend_bt.setOnClickListener(this);
 
-        /** Para la barra de mensajes **/
-        mLy_messages.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                params.height = params.MATCH_PARENT;
-                params.width = params.WRAP_CONTENT;
-                mLy_messages.setLayoutParams(params);
-                //closeKeyboard();
-            }
-        });
-
         status = toolbar.findViewById(R.id.status);
 
         profile.setText(name);
@@ -80,16 +72,70 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
 
     public void sendMsg(String msg){
         startVisibility(msg);
+        messageET.setText("");
     }
 
     public void startVisibility(String msg){
-       CardView sentCV ;
-       TextView textView;
-        sentCV = findViewById(R.id.msg_send01);
+        numMessage++;
+       int msgLy = 0;
+       int msTv = 0;
+
+       switch (numMessage) {
+           case 1:
+               msgLy = R.id.msg_send01;
+               msTv = R.id.tv_send_text01;
+               break;
+           case 3:
+               msgLy = R.id.msg_send02;
+               msTv = R.id.tv_send_text02;
+               break;
+           case 5:
+               msgLy = R.id.msg_send03;
+               msTv = R.id.tv_send_text03;
+               break;
+       }
+
+        sentCV = findViewById(msgLy);
         sentCV.setVisibility(View.VISIBLE);
-        textView =findViewById(R.id.tv_send_text01);
-        textView.setText(msg);
+        mMessage =findViewById(msTv);
+        mMessage.setText(msg);
+        numMessage++;
+
+        switch (numMessage) {
+            case 2:
+                msgLy = R.id.msg_received01;
+                msTv = R.id.tv_received_text01;
+                msg =getResources().getString(R.string.msg_miguel1);
+                break;
+            case 4:
+                msgLy = R.id.msg_received02;
+                msTv = R.id.tv_received_text02;
+                msg =getResources().getString(R.string.msg_miguel2);
+                break;
+            case 6:
+                msgLy = R.id.msg_received03;
+                msTv = R.id.tv_received_text03;
+                msg =getResources().getString(R.string.msg_miguel3);
+                break;
+        }
+
+        sentCV = findViewById(msgLy);
+        mMessage =findViewById(msTv);
+        setResponse(2, msg);
+
     }
+
+    public void setResponse(int time, final String msg) {
+        time = time * 1000;
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                mMessage.setText(msg);
+                sentCV.setVisibility(View.VISIBLE);
+            }
+        }, time);   //5 seconds
+    }
+
     public void setStatus(int time) {
         time = time * 1000;
         Handler handler = new Handler();
