@@ -1,10 +1,10 @@
 package com.addv.mychatutils;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 
 import android.os.Handler;
 import android.view.Menu;
@@ -12,7 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -25,6 +25,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
     private LinearLayout.LayoutParams params;
     private TextView status;
     private EditText messageET;
+    private Button mSend_bt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,11 +41,13 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         mLy_messages = findViewById(R.id.ly_content_messages);
+        mSend_bt = findViewById(R.id.send);
         params = (LinearLayout.LayoutParams) mLy_messages.getLayoutParams();
         TextView profile = toolbar.findViewById(R.id.profile);
         messageET = findViewById(R.id.message);
-        messageET.requestFocus();
+
         messageET.setOnClickListener(this);
+        mSend_bt.setOnClickListener(this);
 
         /** Para la barra de mensajes **/
         mLy_messages.setOnClickListener(new View.OnClickListener() {
@@ -53,7 +56,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
                 params.height = params.MATCH_PARENT;
                 params.width = params.WRAP_CONTENT;
                 mLy_messages.setLayoutParams(params);
-                closeKeyboard();
+                //closeKeyboard();
             }
         });
 
@@ -61,24 +64,33 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
 
         profile.setText(name);
         status.setText("");
-        send(2);
+        setStatus(2);
 
         setSupportActionBar(toolbar);
 
     }
 
-
-    public void showKeyboard() {
-        InputMethodManager inputMethodManager = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
-        inputMethodManager.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.send:
+                sendMsg(messageET.getText().toString());
+        }
     }
 
-    public void closeKeyboard() {
-        InputMethodManager inputMethodManager = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
-        inputMethodManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+    public void sendMsg(String msg){
+        startVisibility(msg);
     }
 
-    public void send(int time) {
+    public void startVisibility(String msg){
+       CardView sentCV ;
+       TextView textView;
+        sentCV = findViewById(R.id.msg_send01);
+        sentCV.setVisibility(View.VISIBLE);
+        textView =findViewById(R.id.tv_send_text01);
+        textView.setText(msg);
+    }
+    public void setStatus(int time) {
         time = time * 1000;
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -110,17 +122,4 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
         return super.onOptionsItemSelected(item);
     }
 
-    public void adjustSize() {
-        params.height = 1450;
-        params.width = params.WRAP_CONTENT;
-        mLy_messages.setLayoutParams(params);
-    }
-
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.message:
-                adjustSize();
-        }
-    }
 }
