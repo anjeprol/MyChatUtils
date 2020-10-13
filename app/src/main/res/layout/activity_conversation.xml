@@ -61,7 +61,7 @@
     <ScrollView
         android:id="@+id/sly_texts"
         android:layout_width="match_parent"
-        android:layout_height="376dp"
+        android:layout_height="360dp"
         android:gravity="bottom"
         android:orientation="horizontal">
 

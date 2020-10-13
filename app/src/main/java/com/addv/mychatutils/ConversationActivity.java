@@ -15,6 +15,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 
@@ -29,6 +30,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
     private Button mSend_bt;
     private CardView sentCV ;
     private int numMessage = 0;
+    private ScrollView scrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,11 +45,13 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
         }
 
         Toolbar toolbar = findViewById(R.id.toolbar);
+        scrollView = findViewById(R.id.sly_texts);
         mLy_messages = findViewById(R.id.ly_content_messages);
         mSend_bt = findViewById(R.id.send);
         params = (LinearLayout.LayoutParams) mLy_messages.getLayoutParams();
         TextView profile = toolbar.findViewById(R.id.profile);
         messageET = findViewById(R.id.message);
+        messageET.requestFocus();
 
         messageET.setOnClickListener(this);
         mSend_bt.setOnClickListener(this);
@@ -132,8 +136,18 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
             public void run() {
                 mMessage.setText(msg);
                 sentCV.setVisibility(View.VISIBLE);
+                focusOnView();
             }
         }, time);   //5 seconds
+    }
+
+    private final void focusOnView(){
+        scrollView.post(new Runnable() {
+            @Override
+            public void run() {
+                scrollView.scrollTo(0, sentCV.getBottom());
+            }
+        });
     }
 
     public void setStatus(int time) {
