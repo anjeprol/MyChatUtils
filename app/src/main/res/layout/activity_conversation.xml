@@ -121,9 +121,11 @@
                 android:id="@+id/msg_received01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/bg_msg_received"
                 android:layout_marginLeft="@dimen/margin_sides"
                 android:layout_marginTop="@dimen/margin_top"
                 android:layout_marginRight="@dimen/margin_sides"
+                android:layout_marginBottom="2dp"
                 android:visibility="gone"
                 app:cardCornerRadius="@dimen/cornerRadius">
 
@@ -139,6 +141,7 @@
                         android:id="@+id/tv_received_text01"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/tx_color"
                         android:layout_marginLeft="@dimen/margin_sides"
                         android:layout_marginTop="@dimen/top_text_views"
                         android:text="Mensaje para recibido"
@@ -192,7 +195,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_hr_sendd"
+                        android:id="@+id/tv_hr_sendddd"
                         android:layout_width="@dimen/widthText"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/top_text_views"
@@ -210,6 +213,8 @@
                 android:id="@+id/msg_received02"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                app:cardBackgroundColor="@color/bg_msg_received"
                 android:layout_marginLeft="@dimen/margin_sides"
                 android:layout_marginTop="@dimen/margin_top"
                 android:layout_marginRight="@dimen/margin_sides"
@@ -228,6 +233,7 @@
                         android:id="@+id/tv_received_text02"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/tx_color"
                         android:layout_marginLeft="@dimen/margin_sides"
                         android:layout_marginTop="@dimen/top_text_views"
                         android:text="Mensaje para recibido"
@@ -299,6 +305,8 @@
                 android:id="@+id/msg_received03"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                app:cardBackgroundColor="@color/bg_msg_received"
                 android:layout_marginLeft="@dimen/margin_sides"
                 android:layout_marginTop="@dimen/margin_top"
                 android:layout_marginRight="@dimen/margin_sides"
@@ -317,6 +325,7 @@
                         android:id="@+id/tv_received_text03"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/tx_color"
                         android:layout_marginLeft="@dimen/margin_sides"
                         android:layout_marginTop="@dimen/top_text_views"
                         android:text="Mensaje para recibido"
@@ -354,6 +363,9 @@
             android:layout_width="250dp"
             android:layout_height="@dimen/height_texts"
             android:layout_marginLeft="@dimen/margin_left_time"
+            android:backgroundTint="@color/bg_msg_received"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_title"
             android:background="#FFFFFF"
             android:gravity="center_vertical" />
 

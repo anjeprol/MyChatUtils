@@ -44,13 +44,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         listview = (ListView) findViewById(R.id.simpleListView);
 
         names = new ArrayList<String>();
-        names.add("Angelica");
+        names.add("Mamá");
         names.add("Miguel");
-        names.add("Jose");
-        names.add("pio");
-        names.add("Rodrigo");
-        names.add("Jose");
-        names.add("pio");
+        names.add("Valeria C.");
+        names.add("Oscar Ferr");
+        names.add("Sandro 5to");
+        names.add("Maestra Betty");
+        names.add("Rodry");
 
         msg = new ArrayList<String>();
         msg.add("asi quedamos porq...");
