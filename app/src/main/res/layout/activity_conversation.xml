@@ -61,7 +61,7 @@
     <ScrollView
         android:id="@+id/sly_texts"
         android:layout_width="match_parent"
-        android:layout_height="360dp"
+        android:layout_height="331dp"
         android:gravity="bottom"
         android:orientation="horizontal">
 
@@ -69,6 +69,47 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_sides"
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginRight="@dimen/margin_sides"
+                android:layout_marginBottom="2dp"
+                app:cardBackgroundColor="@color/bg_msg_received"
+                app:cardCornerRadius="@dimen/cornerRadius">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_sides"
+                    android:layout_marginRight="@dimen/margin_sides"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_sides"
+                        android:layout_marginTop="@dimen/top_text_views"
+                        android:text="@string/initial_message"
+                        android:textColor="@color/tx_color"
+                        android:textSize="@dimen/text_size_title"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="@dimen/widthText"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/top_text_views"
+                        android:layout_marginRight="@dimen/margin_sides"
+                        android:layout_marginBottom="@dimen/margin_sides"
+
+                        android:gravity="end"
+                        android:hint="9:49 PM"
+                        android:textSize="@dimen/hint_size_address" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/msg_send01"
@@ -121,12 +162,12 @@
                 android:id="@+id/msg_received01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/bg_msg_received"
                 android:layout_marginLeft="@dimen/margin_sides"
                 android:layout_marginTop="@dimen/margin_top"
                 android:layout_marginRight="@dimen/margin_sides"
                 android:layout_marginBottom="2dp"
                 android:visibility="gone"
+                app:cardBackgroundColor="@color/bg_msg_received"
                 app:cardCornerRadius="@dimen/cornerRadius">
 
                 <LinearLayout
@@ -141,10 +182,10 @@
                         android:id="@+id/tv_received_text01"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/tx_color"
                         android:layout_marginLeft="@dimen/margin_sides"
                         android:layout_marginTop="@dimen/top_text_views"
                         android:text="Mensaje para recibido"
+                        android:textColor="@color/tx_color"
                         android:textSize="@dimen/text_size_title"
                         android:textStyle="bold" />
 
@@ -213,12 +254,12 @@
                 android:id="@+id/msg_received02"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
-                app:cardBackgroundColor="@color/bg_msg_received"
                 android:layout_marginLeft="@dimen/margin_sides"
                 android:layout_marginTop="@dimen/margin_top"
                 android:layout_marginRight="@dimen/margin_sides"
+                android:layout_marginBottom="2dp"
                 android:visibility="gone"
+                app:cardBackgroundColor="@color/bg_msg_received"
                 app:cardCornerRadius="@dimen/cornerRadius">
 
                 <LinearLayout
@@ -233,10 +274,10 @@
                         android:id="@+id/tv_received_text02"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/tx_color"
                         android:layout_marginLeft="@dimen/margin_sides"
                         android:layout_marginTop="@dimen/top_text_views"
                         android:text="Mensaje para recibido"
+                        android:textColor="@color/tx_color"
                         android:textSize="@dimen/text_size_title"
                         android:textStyle="bold" />
 
@@ -305,12 +346,12 @@
                 android:id="@+id/msg_received03"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
-                app:cardBackgroundColor="@color/bg_msg_received"
                 android:layout_marginLeft="@dimen/margin_sides"
                 android:layout_marginTop="@dimen/margin_top"
                 android:layout_marginRight="@dimen/margin_sides"
+                android:layout_marginBottom="2dp"
                 android:visibility="gone"
+                app:cardBackgroundColor="@color/bg_msg_received"
                 app:cardCornerRadius="@dimen/cornerRadius">
 
                 <LinearLayout
@@ -325,10 +366,10 @@
                         android:id="@+id/tv_received_text03"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/tx_color"
                         android:layout_marginLeft="@dimen/margin_sides"
                         android:layout_marginTop="@dimen/top_text_views"
                         android:text="Mensaje para recibido"
+                        android:textColor="@color/tx_color"
                         android:textSize="@dimen/text_size_title"
                         android:textStyle="bold" />
 

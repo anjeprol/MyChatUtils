@@ -60,7 +60,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
 
         profile.setText(name);
         status.setText("");
-        setStatus(2);
+        setStatus(2,ONLINE);
 
         setSupportActionBar(toolbar);
 
@@ -83,6 +83,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
         numMessage++;
        int msgLy = 0;
        int msTv = 0;
+       int time = 2;
 
        switch (numMessage) {
            case 1:
@@ -101,6 +102,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
 
         sentCV = findViewById(msgLy);
         sentCV.setVisibility(View.VISIBLE);
+        focusOnView();
         mMessage =findViewById(msTv);
         mMessage.setText(msg);
         numMessage++;
@@ -110,22 +112,26 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
                 msgLy = R.id.msg_received01;
                 msTv = R.id.tv_received_text01;
                 msg =getResources().getString(R.string.msg_miguel1);
+                time = 8;
                 break;
             case 4:
                 msgLy = R.id.msg_received02;
                 msTv = R.id.tv_received_text02;
                 msg =getResources().getString(R.string.msg_miguel2);
+                time = 11;
                 break;
             case 6:
                 msgLy = R.id.msg_received03;
                 msTv = R.id.tv_received_text03;
                 msg =getResources().getString(R.string.msg_miguel3);
+                time = 15;
                 break;
         }
 
         sentCV = findViewById(msgLy);
         mMessage =findViewById(msTv);
-        setResponse(2, msg);
+        setStatus(2,ACTIVE);
+        setResponse(time, msg);
 
     }
 
@@ -136,6 +142,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
             public void run() {
                 mMessage.setText(msg);
                 sentCV.setVisibility(View.VISIBLE);
+                status.setText(ONLINE);
                 focusOnView();
             }
         }, time);   //5 seconds
@@ -150,12 +157,12 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
         });
     }
 
-    public void setStatus(int time) {
+    public void setStatus(int time, final String type) {
         time = time * 1000;
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             public void run() {
-                status.setText(ONLINE);
+                status.setText(type);
             }
         }, time);   //5 seconds
     }
