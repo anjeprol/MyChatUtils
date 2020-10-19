@@ -102,9 +102,9 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
 
         sentCV = findViewById(msgLy);
         sentCV.setVisibility(View.VISIBLE);
-        focusOnView();
         mMessage =findViewById(msTv);
         mMessage.setText(msg);
+        focusOnView();
         numMessage++;
 
         switch (numMessage) {
@@ -112,19 +112,19 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
                 msgLy = R.id.msg_received01;
                 msTv = R.id.tv_received_text01;
                 msg =getResources().getString(R.string.msg_miguel1);
-                time = 8;
+                time = 4;
                 break;
             case 4:
                 msgLy = R.id.msg_received02;
                 msTv = R.id.tv_received_text02;
                 msg =getResources().getString(R.string.msg_miguel2);
-                time = 11;
+                time = 5;
                 break;
             case 6:
                 msgLy = R.id.msg_received03;
                 msTv = R.id.tv_received_text03;
                 msg =getResources().getString(R.string.msg_miguel3);
-                time = 15;
+                time = 7;
                 break;
         }
 
