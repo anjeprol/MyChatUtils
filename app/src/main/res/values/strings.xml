@@ -10,9 +10,9 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_conversation">ConversationActivity</string>
-    <string name="msg_miguel1">Me castigaron en la escuela</string>
-    <string name="msg_miguel2">No voy a poder ir.</string>
-    <string name="msg_miguel3">No te enojes. Perdóname.</string>
+    <string name="msg_miguel1">Me castigaron en la escuela 😖😢</string>
+    <string name="msg_miguel2">No voy a poder ir.😔😟</string>
+    <string name="msg_miguel3">No te enojes 😰. Perdóname.🥺🥺 </string>
     <string name="msg_miguel4">😅😘</string>
     <string name="send">Enviar</string>
     <string name="initial_message">mañana te voy a dar un regalo, te extraño!! 😘🥰</string>
