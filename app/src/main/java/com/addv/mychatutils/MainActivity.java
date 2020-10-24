@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         hr = new ArrayList<String>();
         hr.add("5:23 AM");
-        hr.add("3:10 PM");
+        hr.add("Hoy");
         hr.add("Ayer");
         hr.add("12/05/20");
         hr.add("ayer");

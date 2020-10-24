@@ -103,9 +103,7 @@
                         android:layout_marginTop="@dimen/top_text_views"
                         android:layout_marginRight="@dimen/margin_sides"
                         android:layout_marginBottom="@dimen/margin_sides"
-
                         android:gravity="end"
-                        android:hint="9:49 PM"
                         android:textSize="@dimen/hint_size_address" />
                 </LinearLayout>
 
