@@ -21,7 +21,7 @@
             app:popupTheme="@style/AppTheme.PopupOverlay">
 
             <ImageView
-                android:id="@+id/icon"
+                android:id="@+id/avatar"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:layout_marginLeft="10dp"
@@ -149,7 +149,6 @@
                         android:layout_marginRight="@dimen/margin_sides"
                         android:layout_marginBottom="@dimen/margin_sides"
                         android:gravity="end"
-                        android:hint="4:49 PM"
                         android:textSize="@dimen/hint_size_address" />
 
                 </LinearLayout>
@@ -195,7 +194,6 @@
                         android:layout_marginRight="@dimen/margin_sides"
                         android:layout_marginBottom="@dimen/margin_sides"
                         android:gravity="end"
-                        android:hint="4:49 PM"
                         android:textSize="@dimen/hint_size_address" />
                 </LinearLayout>
 
@@ -241,7 +239,6 @@
                         android:layout_marginRight="@dimen/margin_sides"
                         android:layout_marginBottom="@dimen/margin_sides"
                         android:gravity="end"
-                        android:hint="4:49 PM"
                         android:textSize="@dimen/hint_size_address" />
 
                 </LinearLayout>
@@ -287,7 +284,6 @@
                         android:layout_marginRight="@dimen/margin_sides"
                         android:layout_marginBottom="@dimen/margin_sides"
                         android:gravity="end"
-                        android:hint="4:49 PM"
                         android:textSize="@dimen/hint_size_address" />
                 </LinearLayout>
 
@@ -333,7 +329,6 @@
                         android:layout_marginRight="@dimen/margin_sides"
                         android:layout_marginBottom="@dimen/margin_sides"
                         android:gravity="end"
-                        android:hint="4:49 PM"
                         android:textSize="@dimen/hint_size_address" />
 
                 </LinearLayout>
@@ -379,7 +374,6 @@
                         android:layout_marginRight="@dimen/margin_sides"
                         android:layout_marginBottom="@dimen/margin_sides"
                         android:gravity="end"
-                        android:hint="4:49 PM"
                         android:textSize="@dimen/hint_size_address" />
                 </LinearLayout>
 

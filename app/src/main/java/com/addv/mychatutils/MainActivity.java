@@ -1,6 +1,5 @@
 package com.addv.mychatutils;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -16,16 +15,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     private ListView listview;
+
     private ArrayList<String> names;
     private ArrayList<String> msg;
     private ArrayList<String> hr;
@@ -42,6 +40,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         listview = (ListView) findViewById(R.id.simpleListView);
+
+
+
 
         names = new ArrayList<String>();
         names.add("Mamá");

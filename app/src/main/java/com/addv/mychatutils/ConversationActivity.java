@@ -14,9 +14,12 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import static com.addv.mychatutils.R.drawable.miguel;
 
 
 public class ConversationActivity extends AppCompatActivity implements View.OnClickListener {
@@ -25,6 +28,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
     private LinearLayout mLy_messages;
     private LinearLayout.LayoutParams params;
     private TextView status;
+    private ImageView avatar;
     private TextView mMessage;
     private EditText messageET;
     private Button mSend_bt;
@@ -46,6 +50,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         scrollView = findViewById(R.id.sly_texts);
+        avatar = findViewById(R.id.avatar);
         mLy_messages = findViewById(R.id.ly_content_messages);
         mSend_bt = findViewById(R.id.send);
         params = (LinearLayout.LayoutParams) mLy_messages.getLayoutParams();
@@ -60,6 +65,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
 
         profile.setText(name);
         status.setText("");
+        avatar.setImageResource(miguel);
         setStatus(2,ONLINE);
 
         setSupportActionBar(toolbar);
