@@ -85,6 +85,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/margin_sides"
                     android:layout_marginRight="@dimen/margin_sides"
+                    android:layout_marginBottom="@dimen/margin_sides"
                     android:orientation="vertical">
 
                     <TextView
@@ -97,14 +98,6 @@
                         android:textSize="@dimen/text_size_title"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="@dimen/widthText"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/top_text_views"
-                        android:layout_marginRight="@dimen/margin_sides"
-                        android:layout_marginBottom="@dimen/margin_sides"
-                        android:gravity="end"
-                        android:textSize="@dimen/hint_size_address" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -128,6 +121,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/margin_sides"
                     android:layout_marginRight="@dimen/margin_sides"
+                    android:layout_marginBottom="@dimen/margin_sides"
                     android:orientation="vertical">
 
                     <TextView
@@ -141,15 +135,6 @@
                         android:textSize="@dimen/text_size_title"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/tv_hr_send"
-                        android:layout_width="@dimen/widthText"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/top_text_views"
-                        android:layout_marginRight="@dimen/margin_sides"
-                        android:layout_marginBottom="@dimen/margin_sides"
-                        android:gravity="end"
-                        android:textSize="@dimen/hint_size_address" />
 
                 </LinearLayout>
 
@@ -173,6 +158,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/margin_sides"
                     android:layout_marginRight="@dimen/margin_sides"
+                    android:layout_marginBottom="@dimen/margin_sides"
                     android:orientation="vertical">
 
                     <TextView
@@ -185,16 +171,6 @@
                         android:textColor="@color/tx_color"
                         android:textSize="@dimen/text_size_title"
                         android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tv_hr_received"
-                        android:layout_width="@dimen/widthText"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/top_text_views"
-                        android:layout_marginRight="@dimen/margin_sides"
-                        android:layout_marginBottom="@dimen/margin_sides"
-                        android:gravity="end"
-                        android:textSize="@dimen/hint_size_address" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -218,6 +194,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/margin_sides"
                     android:layout_marginRight="@dimen/margin_sides"
+                    android:layout_marginBottom="@dimen/margin_sides"
                     android:orientation="vertical">
 
                     <TextView
@@ -231,15 +208,6 @@
                         android:textSize="@dimen/text_size_title"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/tv_hr_sendddd"
-                        android:layout_width="@dimen/widthText"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/top_text_views"
-                        android:layout_marginRight="@dimen/margin_sides"
-                        android:layout_marginBottom="@dimen/margin_sides"
-                        android:gravity="end"
-                        android:textSize="@dimen/hint_size_address" />
 
                 </LinearLayout>
 
@@ -263,6 +231,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/margin_sides"
                     android:layout_marginRight="@dimen/margin_sides"
+                    android:layout_marginBottom="@dimen/margin_sides"
                     android:orientation="vertical">
 
                     <TextView
@@ -276,15 +245,6 @@
                         android:textSize="@dimen/text_size_title"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/tv_hr_receivedd"
-                        android:layout_width="@dimen/widthText"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/top_text_views"
-                        android:layout_marginRight="@dimen/margin_sides"
-                        android:layout_marginBottom="@dimen/margin_sides"
-                        android:gravity="end"
-                        android:textSize="@dimen/hint_size_address" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -308,6 +268,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/margin_sides"
                     android:layout_marginRight="@dimen/margin_sides"
+                    android:layout_marginBottom="@dimen/margin_sides"
                     android:orientation="vertical">
 
                     <TextView
@@ -320,16 +281,6 @@
                         android:textColor="#000000"
                         android:textSize="@dimen/text_size_title"
                         android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tv_hr_sendd"
-                        android:layout_width="@dimen/widthText"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/top_text_views"
-                        android:layout_marginRight="@dimen/margin_sides"
-                        android:layout_marginBottom="@dimen/margin_sides"
-                        android:gravity="end"
-                        android:textSize="@dimen/hint_size_address" />
 
                 </LinearLayout>
 
@@ -353,6 +304,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/margin_sides"
                     android:layout_marginRight="@dimen/margin_sides"
+                    android:layout_marginBottom="@dimen/margin_sides"
                     android:orientation="vertical">
 
                     <TextView
@@ -366,15 +318,6 @@
                         android:textSize="@dimen/text_size_title"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/tv_hr_receiveddd"
-                        android:layout_width="@dimen/widthText"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/top_text_views"
-                        android:layout_marginRight="@dimen/margin_sides"
-                        android:layout_marginBottom="@dimen/margin_sides"
-                        android:gravity="end"
-                        android:textSize="@dimen/hint_size_address" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>

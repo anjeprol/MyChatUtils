@@ -37,12 +37,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         Toolbar toolbar = findViewById(R.id.toolbar);
         listview = (ListView) findViewById(R.id.simpleListView);
-
-
-
 
         names = new ArrayList<String>();
         names.add("Mamá");
@@ -55,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         msg = new ArrayList<String>();
         msg.add("asi quedamos porq...");
-        msg.add("...");
+        msg.add("mañana te voy a da...");
         msg.add("vamos a ver...");
         msg.add("asi porq...");
         msg.add("prefiero otro día");
