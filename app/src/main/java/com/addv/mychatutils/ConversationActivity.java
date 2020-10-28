@@ -30,10 +30,10 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
     private LinearLayout.LayoutParams params;
     private TextView status;
     private ImageView avatar;
-    private TextView mMessage, mMessage2;
+    private TextView mMessage;
     private EditText messageET;
     private Button mSend_bt;
-    private CardView sentCV, sentCV2;
+    private CardView sentCV;
     private int numMessage = 0;
     private ScrollView scrollView;
 
@@ -112,7 +112,8 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
         sentCV.setVisibility(View.VISIBLE);
         mMessage = findViewById(msTv);
         mMessage.setText(msg);
-        focusOnView();
+        focusOnView(sentCV);
+
         numMessage++;
 
         switch (numMessage) {
@@ -132,7 +133,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
                 msgLy = R.id.msg_received03;
                 msTv = R.id.tv_received_text03;
                 msg = getResources().getString(R.string.msg_miguel3);
-                time = 2;
+                time = 3;
                 numMessage++;
                 break;
         }
@@ -162,21 +163,21 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
                             mMessage = findViewById(R.id.tv_received_text04);
                             status.setText(ONLINE);
                             sentCV.setVisibility(View.VISIBLE);
-                            focusOnView();
+                            focusOnView(sentCV);
                         }
                     }, time2);
                 }
-                focusOnView();
+                focusOnView(sentCV);
             }
         }, time);
         status.setText(ONLINE);
     }
 
-    private final void focusOnView() {
+    private final void focusOnView(final CardView cardView) {
         scrollView.post(new Runnable() {
             @Override
             public void run() {
-                scrollView.scrollTo(0, sentCV.getBottom());
+                scrollView.scrollTo(0, cardView.getBottom());
             }
         });
     }
