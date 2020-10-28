@@ -322,9 +322,41 @@
 
             </androidx.cardview.widget.CardView>
 
+            <androidx.cardview.widget.CardView
+                android:id="@+id/msg_received04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_sides"
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginRight="@dimen/margin_sides"
+                android:layout_marginBottom="2dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/bg_msg_received"
+                app:cardCornerRadius="@dimen/cornerRadius">
 
+                <LinearLayout
+                    android:id="@+id/ll_received_viewssss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_sides"
+                    android:layout_marginRight="@dimen/margin_sides"
+                    android:layout_marginBottom="@dimen/margin_sides"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_received_text04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_sides"
+                        android:layout_marginTop="@dimen/top_text_views"
+                        android:text="@string/msg_miguel4"
+                        android:textColor="@color/tx_color"
+                        android:textSize="@dimen/text_size_title"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
-
     </ScrollView>
 
     <LinearLayout
@@ -339,7 +371,7 @@
             android:layout_width="250dp"
             android:layout_height="@dimen/height_texts"
             android:layout_marginLeft="@dimen/margin_left_time"
-            android:backgroundTint="@color/bg_msg_received"
+            android:backgroundTint="#D1B9B5"
             android:textStyle="bold"
             android:textSize="@dimen/text_size_title"
             android:background="#FFFFFF"

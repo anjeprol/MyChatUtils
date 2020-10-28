@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
 import android.os.Handler;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,10 +30,10 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
     private LinearLayout.LayoutParams params;
     private TextView status;
     private ImageView avatar;
-    private TextView mMessage;
+    private TextView mMessage, mMessage2;
     private EditText messageET;
     private Button mSend_bt;
-    private CardView sentCV ;
+    private CardView sentCV, sentCV2;
     private int numMessage = 0;
     private ScrollView scrollView;
 
@@ -66,7 +67,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
         profile.setText(name);
         status.setText("");
         avatar.setImageResource(miguel);
-        setStatus(2,ONLINE);
+        setStatus(2, ONLINE);
 
         setSupportActionBar(toolbar);
 
@@ -80,35 +81,36 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
         }
     }
 
-    public void sendMsg(String msg){
+    public void sendMsg(String msg) {
+        int time = 3;
         startVisibility(msg);
         messageET.setText("");
     }
 
-    public void startVisibility(String msg){
+    public void startVisibility(String msg) {
         numMessage++;
-       int msgLy = 0;
-       int msTv = 0;
-       int time = 2;
+        int msgLy = 0;
+        int msTv = 0;
+        int time = 2;
 
-       switch (numMessage) {
-           case 1:
-               msgLy = R.id.msg_send01;
-               msTv = R.id.tv_send_text01;
-               break;
-           case 3:
-               msgLy = R.id.msg_send02;
-               msTv = R.id.tv_send_text02;
-               break;
-           case 5:
-               msgLy = R.id.msg_send03;
-               msTv = R.id.tv_send_text03;
-               break;
-       }
+        switch (numMessage) {
+            case 1:
+                msgLy = R.id.msg_send01;
+                msTv = R.id.tv_send_text01;
+                break;
+            case 3:
+                msgLy = R.id.msg_send02;
+                msTv = R.id.tv_send_text02;
+                break;
+            case 5:
+                msgLy = R.id.msg_send03;
+                msTv = R.id.tv_send_text03;
+                break;
+        }
 
         sentCV = findViewById(msgLy);
         sentCV.setVisibility(View.VISIBLE);
-        mMessage =findViewById(msTv);
+        mMessage = findViewById(msTv);
         mMessage.setText(msg);
         focusOnView();
         numMessage++;
@@ -117,44 +119,60 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
             case 2:
                 msgLy = R.id.msg_received01;
                 msTv = R.id.tv_received_text01;
-                msg =getResources().getString(R.string.msg_miguel1);
+                msg = getResources().getString(R.string.msg_miguel1);
                 time = 4;
                 break;
             case 4:
                 msgLy = R.id.msg_received02;
                 msTv = R.id.tv_received_text02;
-                msg =getResources().getString(R.string.msg_miguel2);
+                msg = getResources().getString(R.string.msg_miguel2);
                 time = 5;
                 break;
             case 6:
                 msgLy = R.id.msg_received03;
                 msTv = R.id.tv_received_text03;
-                msg =getResources().getString(R.string.msg_miguel3);
-                time = 7;
+                msg = getResources().getString(R.string.msg_miguel3);
+                time = 2;
+                numMessage++;
                 break;
         }
 
         sentCV = findViewById(msgLy);
-        mMessage =findViewById(msTv);
-        setStatus(2,ACTIVE);
+        mMessage = findViewById(msTv);
+        setStatus(2, ACTIVE);
         setResponse(time, msg);
 
     }
 
     public void setResponse(int time, final String msg) {
         time = time * 1000;
+        final int time2 = 5000;
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             public void run() {
                 mMessage.setText(msg);
                 sentCV.setVisibility(View.VISIBLE);
                 status.setText(ONLINE);
+                if (numMessage == 7) {
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            setStatus(1, ACTIVE);
+                            sentCV = findViewById(R.id.msg_received04);
+                            mMessage = findViewById(R.id.tv_received_text04);
+                            status.setText(ONLINE);
+                            sentCV.setVisibility(View.VISIBLE);
+                            focusOnView();
+                        }
+                    }, time2);
+                }
                 focusOnView();
             }
-        }, time);   //5 seconds
+        }, time);
+        status.setText(ONLINE);
     }
 
-    private final void focusOnView(){
+    private final void focusOnView() {
         scrollView.post(new Runnable() {
             @Override
             public void run() {
