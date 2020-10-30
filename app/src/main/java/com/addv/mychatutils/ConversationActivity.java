@@ -83,7 +83,8 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
 
     public void sendMsg(String msg) {
         int time = 3;
-        startVisibility(msg);
+        if (numMessage != 7)
+            startVisibility(msg);
         messageET.setText("");
     }
 
