@@ -20,6 +20,10 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 import static com.addv.mychatutils.R.drawable.miguel;
 
 
@@ -139,6 +143,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
                 break;
         }
 
+        Log.v("TIME", getTime());
         sentCV = findViewById(msgLy);
         mMessage = findViewById(msTv);
         setStatus(2, ACTIVE);
@@ -181,6 +186,12 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
                 scrollView.scrollTo(0, cardView.getBottom());
             }
         });
+    }
+
+    private final String getTime() {
+        SimpleDateFormat sdf = new SimpleDateFormat("hh:mm");
+        String time = sdf.format(new Date());
+        return time;
     }
 
     public void setStatus(int time, final String type) {
