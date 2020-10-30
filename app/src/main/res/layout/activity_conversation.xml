@@ -142,6 +142,14 @@
                         android:textColor="#000000"
                         android:textSize="@dimen/text_size_title"
                         android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/hr_received01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00"
+                        android:layout_marginLeft="@dimen/margin_sides"
+                        android:layout_gravity="right"
+                        />
 
 
                 </LinearLayout>
@@ -179,6 +187,14 @@
                         android:textColor="@color/tx_color"
                         android:textSize="@dimen/text_size_title"
                         android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/hr_received02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00"
+                        android:layout_marginLeft="@dimen/margin_sides"
+                        android:layout_gravity="left"
+                        />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -215,6 +231,14 @@
                         android:textColor="#000000"
                         android:textSize="@dimen/text_size_title"
                         android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/hr_received03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00"
+                        android:layout_marginLeft="@dimen/margin_sides"
+                        android:layout_gravity="right"
+                        />
 
 
                 </LinearLayout>
@@ -252,6 +276,14 @@
                         android:textColor="@color/tx_color"
                         android:textSize="@dimen/text_size_title"
                         android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/hr_received04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00"
+                        android:layout_marginLeft="@dimen/margin_sides"
+                        android:layout_gravity="left"
+                        />
 
                 </LinearLayout>
 
@@ -289,6 +321,14 @@
                         android:textColor="#000000"
                         android:textSize="@dimen/text_size_title"
                         android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/hr_received05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00"
+                        android:layout_marginLeft="@dimen/margin_sides"
+                        android:layout_gravity="left"
+                        />
 
                 </LinearLayout>
 
@@ -325,6 +365,14 @@
                         android:textColor="@color/tx_color"
                         android:textSize="@dimen/text_size_title"
                         android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/hr_received06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00"
+                        android:layout_marginLeft="@dimen/margin_sides"
+                        android:layout_gravity="left"
+                        />
 
                 </LinearLayout>
 
@@ -361,6 +409,15 @@
                         android:textColor="@color/tx_color"
                         android:textSize="@dimen/text_size_title"
                         android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/hr_received07"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00"
+                        android:layout_marginLeft="@dimen/margin_sides"
+                        android:layout_gravity="left"
+                        />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

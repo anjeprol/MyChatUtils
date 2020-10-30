@@ -96,6 +96,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
 
     public void startVisibility(String msg) {
         numMessage++;
+        TextView tv_hr ;
         int msgLy = 0;
         int msTv = 0;
         int time = 2;
@@ -104,14 +105,20 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
             case 1:
                 msgLy = R.id.msg_send01;
                 msTv = R.id.tv_send_text01;
+                tv_hr = findViewById(R.id.hr_received01);
+                tv_hr.setText(getTime());
                 break;
             case 3:
                 msgLy = R.id.msg_send02;
                 msTv = R.id.tv_send_text02;
+                tv_hr = findViewById(R.id.hr_received03);
+                tv_hr.setText(getTime());
                 break;
             case 5:
                 msgLy = R.id.msg_send03;
                 msTv = R.id.tv_send_text03;
+                tv_hr = findViewById(R.id.hr_received05);
+                tv_hr.setText(getTime());
                 break;
         }
 
@@ -128,18 +135,24 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
                 msgLy = R.id.msg_received01;
                 msTv = R.id.tv_received_text01;
                 msg = getResources().getString(R.string.msg_miguel1);
+                tv_hr = findViewById(R.id.hr_received02);
+                tv_hr.setText(getTime());
                 time = 4;
                 break;
             case 4:
                 msgLy = R.id.msg_received02;
                 msTv = R.id.tv_received_text02;
                 msg = getResources().getString(R.string.msg_miguel2);
+                tv_hr = findViewById(R.id.hr_received04);
+                tv_hr.setText(getTime());
                 time = 5;
                 break;
             case 6:
                 msgLy = R.id.msg_received03;
                 msTv = R.id.tv_received_text03;
                 msg = getResources().getString(R.string.msg_miguel3);
+                tv_hr = findViewById(R.id.hr_received06);
+                tv_hr.setText(getTime());
                 time = 3;
                 numMessage++;
                 break;
@@ -166,9 +179,12 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         public void run() {
+                            TextView tv_hr;
                             setStatus(1, ACTIVE);
                             sentCV = findViewById(R.id.msg_received04);
                             mMessage = findViewById(R.id.tv_received_text04);
+                            tv_hr = findViewById(R.id.hr_received07);
+                            tv_hr.setText(getTime());
                             status.setText(ONLINE);
                             sentCV.setVisibility(View.VISIBLE);
                             focusOnView(sentCV);
