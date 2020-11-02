@@ -56,8 +56,8 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
         Toolbar toolbar = findViewById(R.id.toolbar);
         scrollView = findViewById(R.id.sly_texts);
         avatar = findViewById(R.id.avatar);
-        TextView tv_hr00 = findViewById(R.id.hr_received00);
-        tv_hr00.setText(getTime());
+        //TextView tv_hr00 = findViewById(R.id.hr_received00);
+        //tv_hr00.setText(getTime());
         mLy_messages = findViewById(R.id.ly_content_messages);
         mSend_bt = findViewById(R.id.send);
         params = (LinearLayout.LayoutParams) mLy_messages.getLayoutParams();

@@ -70,45 +70,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margin_sides"
-                android:layout_marginTop="@dimen/margin_top"
-                android:layout_marginRight="@dimen/margin_sides"
-                android:layout_marginBottom="2dp"
-                app:cardBackgroundColor="@color/bg_msg_received"
-                app:cardCornerRadius="@dimen/cornerRadius">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/margin_sides"
-                    android:layout_marginRight="@dimen/margin_sides"
-                    android:layout_marginBottom="@dimen/margin_sides"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/margin_sides"
-                        android:layout_marginTop="@dimen/top_text_views"
-                        android:text="@string/initial_message"
-                        android:textColor="@color/tx_color"
-                        android:textSize="@dimen/text_size_title"
-                        android:textStyle="bold" />
-                    <TextView
-                        android:id="@+id/hr_received00"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="00:00"
-                        android:layout_marginLeft="@dimen/margin_sides"
-                        android:layout_gravity="left"
-                        />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/msg_send01"
@@ -426,7 +388,7 @@
 
     <LinearLayout
         android:id="@+id/ly_content_messages"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="bottom"
         android:orientation="horizontal">
@@ -446,7 +408,7 @@
             android:id="@+id/send"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/height_texts"
-            android:layout_gravity="center"
+            android:layout_gravity="right"
             android:layout_marginLeft="@dimen/margin_left_time"
             android:background="@color/colorPrimary"
             android:text="@string/send"
