@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         names = new ArrayList<String>();
         names.add("Mamá");
-        names.add("Miguel");
+        names.add("Sergio");
         names.add("Valeria C.");
         names.add("Oscar Ferr");
         names.add("Sandro 5to");
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         msg = new ArrayList<String>();
         msg.add("asi quedamos porq...");
-        msg.add("mañana te voy a da...");
+        msg.add("...");
         msg.add("vamos a ver...");
         msg.add("asi porq...");
         msg.add("prefiero otro día");

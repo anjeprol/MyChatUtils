@@ -9,4 +9,6 @@
     <color name="bg_messages">#F1E7D7</color>
     <color name="bg_msg_received">#DDD2D0</color>
     <color name="bg_msg_preview">#ECD8D5</color>
+    <color name="bg_location">#009688</color>
+
 </resources>

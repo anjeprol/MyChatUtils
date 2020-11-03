@@ -395,7 +395,7 @@
 
         <EditText
             android:id="@id/message"
-            android:layout_width="250dp"
+            android:layout_width="220dp"
             android:layout_height="@dimen/height_texts"
             android:layout_marginLeft="@dimen/margin_left_time"
             android:backgroundTint="#D1B9B5"
@@ -403,6 +403,13 @@
             android:textSize="@dimen/text_size_title"
             android:background="#FFFFFF"
             android:gravity="center_vertical" />
+
+        <ImageView
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_left_time"
+            android:src="@drawable/img" />
 
         <Button
             android:id="@+id/send"
