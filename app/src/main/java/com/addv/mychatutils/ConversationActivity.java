@@ -40,6 +40,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
     private CardView sentCV;
     private int numMessage = 0;
     private ScrollView scrollView;
+    private ImageView locationIV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,18 +57,15 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
         Toolbar toolbar = findViewById(R.id.toolbar);
         scrollView = findViewById(R.id.sly_texts);
         avatar = findViewById(R.id.avatar);
-        //TextView tv_hr00 = findViewById(R.id.hr_received00);
-        //tv_hr00.setText(getTime());
+        locationIV = findViewById(R.id.locationIV);
         mLy_messages = findViewById(R.id.ly_content_messages);
         mSend_bt = findViewById(R.id.send);
         params = (LinearLayout.LayoutParams) mLy_messages.getLayoutParams();
         TextView profile = toolbar.findViewById(R.id.profile);
         messageET = findViewById(R.id.message);
         messageET.requestFocus();
-
-        messageET.setOnClickListener(this);
+        locationIV.setOnClickListener(this);
         mSend_bt.setOnClickListener(this);
-
         status = toolbar.findViewById(R.id.status);
 
         profile.setText(name);
@@ -84,6 +82,12 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
         switch (view.getId()) {
             case R.id.send:
                 sendMsg(messageET.getText().toString());
+                break;
+            case R.id.locationIV:
+                sentCV = findViewById(R.id.msg_send02);
+                sentCV.setVisibility(View.VISIBLE);
+                focusOnView(sentCV);
+                break;
         }
     }
 
@@ -105,20 +109,11 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
             case 1:
                 msgLy = R.id.msg_send01;
                 msTv = R.id.tv_send_text01;
-                tv_hr = findViewById(R.id.hr_received01);
-                tv_hr.setText(getTime());
                 break;
             case 3:
                 msgLy = R.id.msg_send02;
                 msTv = R.id.tv_send_text02;
-                tv_hr = findViewById(R.id.hr_received03);
-                tv_hr.setText(getTime());
-                break;
-            case 5:
-                msgLy = R.id.msg_send03;
-                msTv = R.id.tv_send_text03;
-                tv_hr = findViewById(R.id.hr_received05);
-                tv_hr.setText(getTime());
+
                 break;
         }
 
@@ -135,30 +130,10 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
                 msgLy = R.id.msg_received01;
                 msTv = R.id.tv_received_text01;
                 msg = getResources().getString(R.string.msg_miguel1);
-                tv_hr = findViewById(R.id.hr_received02);
-                tv_hr.setText(getTime());
                 time = 4;
-                break;
-            case 4:
-                msgLy = R.id.msg_received02;
-                msTv = R.id.tv_received_text02;
-                msg = getResources().getString(R.string.msg_miguel2);
-                tv_hr = findViewById(R.id.hr_received04);
-                tv_hr.setText(getTime());
-                time = 5;
-                break;
-            case 6:
-                msgLy = R.id.msg_received03;
-                msTv = R.id.tv_received_text03;
-                msg = getResources().getString(R.string.msg_miguel3);
-                tv_hr = findViewById(R.id.hr_received06);
-                tv_hr.setText(getTime());
-                time = 3;
-                numMessage++;
                 break;
         }
 
-        Log.v("TIME", getTime());
         sentCV = findViewById(msgLy);
         mMessage = findViewById(msTv);
         setStatus(2, ACTIVE);
@@ -175,22 +150,6 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
                 mMessage.setText(msg);
                 sentCV.setVisibility(View.VISIBLE);
                 status.setText(ONLINE);
-                if (numMessage == 7) {
-                    Handler handler = new Handler();
-                    handler.postDelayed(new Runnable() {
-                        public void run() {
-                            TextView tv_hr;
-                            setStatus(1, ACTIVE);
-                            sentCV = findViewById(R.id.msg_received04);
-                            mMessage = findViewById(R.id.tv_received_text04);
-                            tv_hr = findViewById(R.id.hr_received07);
-                            tv_hr.setText(getTime());
-                            status.setText(ONLINE);
-                            sentCV.setVisibility(View.VISIBLE);
-                            focusOnView(sentCV);
-                        }
-                    }, time2);
-                }
                 focusOnView(sentCV);
             }
         }, time);
@@ -204,12 +163,6 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
                 scrollView.scrollTo(0, cardView.getBottom());
             }
         });
-    }
-
-    private final String getTime() {
-        SimpleDateFormat sdf = new SimpleDateFormat("hh:mm aaa");
-        String time = sdf.format(new Date());
-        return time;
     }
 
     public void setStatus(int time, final String type) {
@@ -240,7 +193,6 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
