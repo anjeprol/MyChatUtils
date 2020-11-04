@@ -2,18 +2,9 @@
     <string name="app_name">Mi Chat</string>
     <string name="action_settings">Acerca de</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_conversation">ConversationActivity</string>
     <string name="msg_miguel1">Tranquila princesa. Mándame tu ubicación y yo me encargo. No lo van a tener tan fácil. 😉️</string>
-    <string name="msg_miguel2">No voy a poder ir.😔😟</string>
-    <string name="msg_miguel3">No te enojes. Perdóname.🥺🥺 </string>
-    <string name="msg_miguel4">😚❤️️❤️🥰😘</string>
     <string name="send">Enviar</string>
     <string name="initial_message">mañana te voy a dar un regalo, te extraño!! 😘🥰</string>
+    <string name="ubicacio_n_en_tiempo_real">Ubicación en tiempo real...</string>
 </resources>

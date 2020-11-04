@@ -7,7 +7,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
 import android.os.Handler;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,11 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-
-import static com.addv.mychatutils.R.drawable.miguel;
+import static com.addv.mychatutils.R.drawable.sergio;
 
 
 public class ConversationActivity extends AppCompatActivity implements View.OnClickListener {
@@ -70,7 +65,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
 
         profile.setText(name);
         status.setText("");
-        avatar.setImageResource(miguel);
+        avatar.setImageResource(sergio);
         setStatus(2, ONLINE);
 
         setSupportActionBar(toolbar);
@@ -93,7 +88,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
 
     public void sendMsg(String msg) {
         int time = 3;
-        if (numMessage != 7)
+        if (numMessage != 2)
             startVisibility(msg);
         messageET.setText("");
     }

@@ -26,13 +26,13 @@ public class CustomAdapter extends BaseAdapter {
         this.hrs = hrs;
 
         profiles = new ArrayList<Integer>();
-        profiles.add(R.drawable.mama);
-        profiles.add(R.drawable.miguel);
+        profiles.add(R.drawable.andrea);
+        profiles.add(R.drawable.sergio);
         profiles.add(R.drawable.valeria);
-        profiles.add(R.drawable.oscar);
-        profiles.add(R.drawable.sandro);
-        profiles.add(R.drawable.maestra);
-        profiles.add(R.drawable.rodry);
+        profiles.add(R.drawable.raul);
+        profiles.add(R.drawable.sandra);
+        profiles.add(R.drawable.bety);
+        profiles.add(R.drawable.fede);
     }
 
     @Override

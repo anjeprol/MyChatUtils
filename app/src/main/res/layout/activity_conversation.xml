@@ -154,6 +154,7 @@
                 android:layout_marginLeft="@dimen/margin_sides"
                 android:layout_marginTop="@dimen/margin_top"
                 android:layout_marginRight="@dimen/margin_sides"
+                android:layout_marginBottom="@dimen/margin_top"
                 android:visibility="gone"
                 app:cardBackgroundColor="@color/bg_text_sent"
                 app:cardCornerRadius="@dimen/cornerRadius">
@@ -180,13 +181,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/margin_sides"
                         android:layout_marginTop="@dimen/top_text_views"
-                        android:hint="Mensaje para enviar"
-                        android:textColor="#000000"
+                        android:hint="@string/ubicacio_n_en_tiempo_real"
                         android:textSize="@dimen/text_size_title"
-                        android:textStyle="bold" />
-
-
-
+                        />
 
                 </LinearLayout>
 
