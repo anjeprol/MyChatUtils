@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mi Chat</string>
+    <string name="app_name">Mi mensajero</string>
     <string name="action_settings">Acerca de</string>
     <!-- Strings used for fragments for navigation -->
     <string name="title_activity_conversation">ConversationActivity</string>

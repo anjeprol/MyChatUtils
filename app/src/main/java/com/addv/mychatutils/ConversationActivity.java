@@ -95,7 +95,6 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
 
     public void startVisibility(String msg) {
         numMessage++;
-        TextView tv_hr ;
         int msgLy = 0;
         int msTv = 0;
         int time = 2;

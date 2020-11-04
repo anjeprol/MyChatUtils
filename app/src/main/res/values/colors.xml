@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#8E2833</color>
-    <color name="colorPrimaryDark">#400007</color>
-    <color name="colorAccent">#8A2732</color>
-    <color name="bg_text_sent">#A37B7F</color>
+    <color name="colorPrimary">#5597AB</color>
+    <color name="colorTint">#D2D6D6</color>
+    <color name="colorPrimaryDark">#345E6A</color>
+    <color name="colorAccent">#4C899A</color>
+    <color name="bg_text_sent">#60AFC5</color>
     <color name="divider">#B2B6B6</color>
     <color name="tx_color">#272525</color>
     <color name="bg_messages">#F1E7D7</color>
-    <color name="bg_msg_received">#DDD2D0</color>
-    <color name="bg_msg_preview">#ECD8D5</color>
+    <color name="bg_msg_received">#D0DDD5</color>
+    <color name="bg_msg_preview">#CBDADD</color>
     <color name="bg_location">#009688</color>
 
 </resources>

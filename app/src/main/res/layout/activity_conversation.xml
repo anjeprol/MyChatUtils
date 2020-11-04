@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_messages"
+    android:background="@drawable/wallpaper"
     android:orientation="vertical"
     tools:context=".ConversationActivity">
 
@@ -204,7 +204,7 @@
             android:layout_width="220dp"
             android:layout_height="@dimen/height_texts"
             android:layout_marginLeft="@dimen/margin_left_time"
-            android:backgroundTint="#D1B9B5"
+            android:backgroundTint="@color/colorTint"
             android:textStyle="bold"
             android:textSize="@dimen/text_size_title"
             android:background="#FFFFFF"
