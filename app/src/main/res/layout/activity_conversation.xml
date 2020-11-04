@@ -207,7 +207,7 @@
             android:background="@drawable/edit_custom"
             android:gravity="left"
             android:textSize="@dimen/text_size_title"
-            android:textStyle="bold" />
+             />
 
         <ImageView
             android:id="@+id/locationIV"
@@ -222,10 +222,10 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/height_texts"
             android:layout_gravity="center"
-
             android:layout_marginLeft="@dimen/margin_left_time"
             android:background="@drawable/button_custom"
             android:text="@string/send"
-            android:textColor="#6A6868" />
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="#5C5959" />
     </LinearLayout>
 </LinearLayout>
