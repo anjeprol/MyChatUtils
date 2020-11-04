@@ -71,10 +71,75 @@
             android:orientation="vertical">
 
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="@dimen/margin_sides"
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginRight="@dimen/margin_sides"
+                app:cardBackgroundColor="@color/bg_text_sent"
+                app:cardCornerRadius="@dimen/cornerRadius">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_sides"
+                    android:layout_marginRight="@dimen/margin_sides"
+                    android:layout_marginBottom="@dimen/margin_sides"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_sides"
+                        android:layout_marginTop="@dimen/top_text_views"
+                        android:text="@string/Mensaje_1_ella"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/text_size_title"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_sides"
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginRight="@dimen/margin_sides"
+                android:layout_marginBottom="2dp"
+                app:cardBackgroundColor="@color/bg_msg_received"
+                app:cardCornerRadius="@dimen/cornerRadius">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_sides"
+                    android:layout_marginRight="@dimen/margin_sides"
+                    android:layout_marginBottom="@dimen/margin_sides"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_sides"
+                        android:layout_marginTop="@dimen/top_text_views"
+                        android:text="@string/mensaje_el_resp"
+                        android:textColor="@color/tx_color"
+                        android:textSize="@dimen/text_size_title"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/msg_send01"
-                android:layout_width="wrap_content"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:layout_marginLeft="@dimen/margin_sides"

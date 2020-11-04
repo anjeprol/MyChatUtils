@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         names = new ArrayList<String>();
         names.add("Sergio");
         msg = new ArrayList<String>();
-        msg.add("...");
+        msg.add("yo tambi...");
         hr = new ArrayList<String>();
         hr.add("Hoy");
 
