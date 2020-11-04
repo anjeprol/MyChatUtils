@@ -41,31 +41,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         listview = (ListView) findViewById(R.id.simpleListView);
 
         names = new ArrayList<String>();
-        names.add("Andrea");
         names.add("Sergio");
-        names.add("Valeria C.");
-        names.add("Fede");
-        names.add("Sandra");
-        names.add("Betty");
-        names.add("Raúl");
-
         msg = new ArrayList<String>();
-        msg.add("asi quedamos porq...");
         msg.add("...");
-        msg.add("vamos a ver...");
-        msg.add("asi porq...");
-        msg.add("prefiero otro día");
-        msg.add("...");
-        msg.add("va! te avisco como quedamos");
-
         hr = new ArrayList<String>();
-        hr.add("5:23 AM");
         hr.add("Hoy");
-        hr.add("Ayer");
-        hr.add("12/05/20");
-        hr.add("ayer");
-        hr.add("1:45 PM");
-        hr.add("6:00 PM");
 
         CustomAdapter customAdapter = new CustomAdapter(this, R.layout.list_item, names, msg, hr);
         listview.setAdapter(customAdapter);

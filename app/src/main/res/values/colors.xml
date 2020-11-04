@@ -10,6 +10,6 @@
     <color name="bg_messages">#F1E7D7</color>
     <color name="bg_msg_received">#D0DDD5</color>
     <color name="bg_msg_preview">#CBDADD</color>
-    <color name="bg_location">#009688</color>
+    <color name="bg_location">#BEC1C5</color>
 
 </resources>
