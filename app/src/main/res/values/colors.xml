@@ -11,5 +11,6 @@
     <color name="bg_msg_received">#E2D3E8</color>
     <color name="bg_msg_preview">#CAA9C4</color>
     <color name="bg_location">#D6C7DC</color>
+    <color name="white">#FFFFFF</color>
 
 </resources>

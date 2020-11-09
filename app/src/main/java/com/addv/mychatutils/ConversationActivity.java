@@ -2,8 +2,10 @@ package com.addv.mychatutils;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.os.Build;
 import android.os.Bundle;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -30,7 +32,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
     private final static String ACTIVE = "Escribiendo...";
     private final static String ONLINE = "Conectado";
     private LinearLayout mLy_messages;
-    private LinearLayout.LayoutParams params;
+    private LinearLayout ll1,ll2,ll3;
     private TextView status;
     private ImageView avatar;
     private TextView mMessage;
@@ -57,9 +59,9 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
         scrollView = findViewById(R.id.sly_texts);
         avatar = findViewById(R.id.avatar);
         locationIV = findViewById(R.id.locationIV);
-        mLy_messages = findViewById(R.id.ly_content_messages);
+        //mLy_messages = findViewById(R.id.ly_content_messages);
         mSend_bt = findViewById(R.id.send);
-        params = (LinearLayout.LayoutParams) mLy_messages.getLayoutParams();
+       // params = (LinearLayout.LayoutParams) mLy_messages.getLayoutParams();
         TextView profile = toolbar.findViewById(R.id.profile);
         messageET = findViewById(R.id.message);
         messageET.requestFocus();
@@ -78,6 +80,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -87,10 +90,23 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
             case R.id.locationIV: // Llamar aqui el fragmento
                 sentCV = findViewById(R.id.msg_send02);
                 showAlertDialogButtonClicked();
-                //sentCV.setVisibility(View.VISIBLE);
-                //focusOnView(sentCV);
+                break;
+            case  R.id.ll_1:
+                changeColor(ll1,ll2,ll3);
+                break;
+            case  R.id.ll_2:
+                changeColor(ll2,ll1,ll3);
+                break;
+            case  R.id.ll_3:
+                changeColor(ll3,ll2,ll1);
                 break;
         }
+    }
+
+    public void changeColor(final LinearLayout ll00, final LinearLayout ll01,final LinearLayout ll02){
+        ll00.setBackgroundColor(getResources().getColor(R.color.divider));
+        ll01.setBackgroundColor(getResources().getColor(R.color.white));
+        ll02.setBackgroundColor(getResources().getColor(R.color.white));
     }
 
     public void showAlertDialogButtonClicked() {
@@ -99,13 +115,20 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
         builder.setTitle("Enviar ubicación");
         // set the custom layout
         final View customLayout = getLayoutInflater().inflate(R.layout.map_pop_up, null);
+        ll1 = customLayout.findViewById(R.id.ll_1);
+        ll2 = customLayout.findViewById(R.id.ll_2);
+        ll3 = customLayout.findViewById(R.id.ll_3);
+        ll1.setOnClickListener(this);
+        ll2.setOnClickListener(this);
+        ll3.setOnClickListener(this);
         builder.setView(customLayout);
         // add a button
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("Enviar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 // send data from the AlertDialog to the Activity
-
+                sentCV.setVisibility(View.VISIBLE);
+                focusOnView(sentCV);
             }
         });
         // create and show the alert dialog
