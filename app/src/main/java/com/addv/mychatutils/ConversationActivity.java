@@ -1,10 +1,14 @@
 package com.addv.mychatutils;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
 
 import android.os.Handler;
 import android.view.Menu;
@@ -63,6 +67,8 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
         mSend_bt.setOnClickListener(this);
         status = toolbar.findViewById(R.id.status);
 
+
+
         profile.setText(name);
         status.setText("");
         avatar.setImageResource(sergio);
@@ -78,12 +84,33 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
             case R.id.send:
                 sendMsg(messageET.getText().toString());
                 break;
-            case R.id.locationIV:
+            case R.id.locationIV: // Llamar aqui el fragmento
                 sentCV = findViewById(R.id.msg_send02);
-                sentCV.setVisibility(View.VISIBLE);
-                focusOnView(sentCV);
+                showAlertDialogButtonClicked();
+                //sentCV.setVisibility(View.VISIBLE);
+                //focusOnView(sentCV);
                 break;
         }
+    }
+
+    public void showAlertDialogButtonClicked() {
+        // create an alert builder
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Enviar ubicación");
+        // set the custom layout
+        final View customLayout = getLayoutInflater().inflate(R.layout.map_pop_up, null);
+        builder.setView(customLayout);
+        // add a button
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // send data from the AlertDialog to the Activity
+
+            }
+        });
+        // create and show the alert dialog
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
     public void sendMsg(String msg) {

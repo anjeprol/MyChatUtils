@@ -9,4 +9,10 @@
     <string name="ubicacio_n_en_tiempo_real">Ubicación en tiempo real...</string>
     <string name="Mensaje_1_ella">Ya te quiero ver ❤️ te extraño mucho!! </string>
     <string name="mensaje_el_resp">Yo también princesa 😘 </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="compartir_ubicaci_n_en_tiempo_real">Compartir ubicación en tiempo real</string>
+    <string name="dir1">Enviar tu ubicación actual</string>
+    <string name="dir2">Oficina</string>
+    <string name="dir3">Casa papaás</string>
 </resources>
