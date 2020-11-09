@@ -13,6 +13,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="compartir_ubicaci_n_en_tiempo_real">Compartir ubicación en tiempo real</string>
     <string name="dir1">Enviar tu ubicación actual</string>
-    <string name="dir2">Oficina</string>
-    <string name="dir3">Casa papaás</string>
+    <string name="det_dir1">margen de precisioón 100 m</string>
+    <string name="dir2">Ramona cocina</string>
+    <string name="det_dir2">Artículo 123 #116 Col. Centro</string>
+    <string name="dir3">Edificio Humboldt</string>
+    <string name="det_dir3">Artículo 123 #116</string>
 </resources>

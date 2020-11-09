@@ -174,7 +174,7 @@ public class ConversationActivity extends AppCompatActivity implements View.OnCl
                 msgLy = R.id.msg_received01;
                 msTv = R.id.tv_received_text01;
                 msg = getResources().getString(R.string.msg_miguel1);
-                time = 4;
+                time = 7;
                 break;
         }
 
